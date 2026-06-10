@@ -1,0 +1,33 @@
+/* 全体の文字と中央寄せ */
+body {
+    font-family: "Arial", "Meiryo", sans-serif;
+    text-align: center;
+}
+
+/* 文字サイズ */
+html {
+    font-size: 20px;
+}
+
+/* h1の装飾 */
+h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1.2em;
+    text-shadow: 2px 2px 4px gray;
+    border-bottom: 3px solid rgb(115, 115, 114);
+}
+
+/* 色指定（クラス） */
+.pink {
+    color: rgb(255, 192, 203);
+}
+
+.blue {
+    color: skyblue;
+}
+
+/* basicの中にあるpタグだけ太字にする */
+#basic p {
+    font-weight: bold;
+}
