@@ -1,0 +1,86 @@
+h1, p, body {
+    margin: 0;
+}
+p, a {
+    font-size: 20px;
+}
+
+/* =========================================
+   Step 4. header
+   ========================================= */
+header {
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+header h1 {
+    color: rgb(255, 255, 255);
+}
+
+/* =========================================
+   Step 5. main (Flexbox)
+   ========================================= */
+main {
+    padding: 10px;
+}
+#parent {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ここで幅を30%に固定します */
+.contents {
+    border: 3px solid rgb(238, 204, 204);
+    width: 30%; /* ★3つの合計で約90%になるので、これで綺麗に並びます */
+    padding: 10px 15px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.contents h2 {
+    font-size: 25px;
+    border-bottom: 3px dotted rgb(236, 122, 122);
+}
+.contents h2::before {
+    content: "●";
+    color: rgb(239, 111, 139);
+    margin-right: 5px;
+}
+.contents p:nth-of-type(2)::first-letter {
+    font-weight: bold;
+    color: rgb(97, 206, 249);
+}
+.contents img {
+    margin: 10px 0;
+    width: 70%;
+}
+
+/* =========================================
+   Step 6. footer
+   ========================================= */
+footer {
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+footer a {
+    color: rgb(255, 255, 255);
+}
+footer a:visited {
+    color: rgb(193, 234, 251);
+}
+footer a:hover {
+    color: rgb(245, 178, 168);
+}
+
+/* =========================================
+   Step 7. レスポンシブ
+   ========================================= */
+@media screen and (max-width: 768px) {
+    #parent {
+        flex-direction: column;
+    }
+    .contents {
+        width: 90%; /* 縦並びの時は幅を広げる */
+        margin: 10px auto;
+    }
+}
